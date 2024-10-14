@@ -1,0 +1,6 @@
+@MomProductApi_HostAddress = http://localhost:5214
+
+GET {{MomProductApi_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
