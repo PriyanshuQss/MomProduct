@@ -1,9 +1,8 @@
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
-using MomBlogApi.Repositories;
+using MomProductApi.Repositories;
 using System.Text;
-using MomBlogApi.Repositories;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -67,6 +66,8 @@ builder.Services.AddSwaggerGen(c =>
 });
 
 builder.Services.AddScoped<IBlogRepository, BlogRepository>();
+builder.Services.AddScoped<IBlogTypeRepository, BlogTypeRepository>();
+
 
 var app = builder.Build();
 

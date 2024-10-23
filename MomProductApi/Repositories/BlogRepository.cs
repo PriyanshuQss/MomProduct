@@ -5,7 +5,7 @@ using System.Data;
 using System.Threading.Tasks;
 using MomProduct.Model;
 
-namespace MomBlogApi.Repositories
+namespace MomProductApi.Repositories
 {
         public interface IBlogRepository
         {
@@ -29,7 +29,7 @@ namespace MomBlogApi.Repositories
 
             public async Task<IEnumerable<Blog>> GetAllAsync()
             {
-                const string query = "SELECT * FROM Blogs";
+                const string query = "SELECT * FROM BlogType";
                 using var connection = CreateConnection();
                 return await connection.QueryAsync<Blog>(query);
             }
